@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6583BE881A158ECD00C9C03B /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6583BE871A158ECD00C9C03B /* TabBarItem.swift */; };
+		6583BE8A1A15A43B00C9C03B /* TabBarItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6583BE891A15A43B00C9C03B /* TabBarItemState.swift */; };
+		6583BE8C1A15A82E00C9C03B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6583BE8B1A15A82E00C9C03B /* TabBarViewController.swift */; };
+		6583BE8E1A15AA3500C9C03B /* UpDownMouseGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6583BE8D1A15AA3500C9C03B /* UpDownMouseGestureRecognizer.swift */; };
+		65857AD31A16EFCD0071A034 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65857AD21A16EFCD0071A034 /* TabViewController.swift */; };
+		65857AD51A16F01D0071A034 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65857AD41A16F01D0071A034 /* NavigationViewController.swift */; };
 		65B715DD1A156B0E00319D19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B715DC1A156B0E00319D19 /* AppDelegate.swift */; };
-		65B715DF1A156B0E00319D19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B715DE1A156B0E00319D19 /* ViewController.swift */; };
 		65B715E11A156B0E00319D19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B715E01A156B0E00319D19 /* Images.xcassets */; };
 		65B715E41A156B0E00319D19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B715E21A156B0E00319D19 /* Main.storyboard */; };
 		65B715F01A156B0E00319D19 /* GCTabView_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B715EF1A156B0E00319D19 /* GCTabView_swiftTests.swift */; };
+		65B715FA1A15862300319D19 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B715F91A15862300319D19 /* TabBarView.swift */; };
+		65FE1CE91A16F56B00DB791B /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE1CE81A16F56B00DB791B /* StyleKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +32,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6583BE871A158ECD00C9C03B /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		6583BE891A15A43B00C9C03B /* TabBarItemState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemState.swift; sourceTree = "<group>"; };
+		6583BE8B1A15A82E00C9C03B /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6583BE8D1A15AA3500C9C03B /* UpDownMouseGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpDownMouseGestureRecognizer.swift; sourceTree = "<group>"; };
+		65857AD21A16EFCD0071A034 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		65857AD41A16F01D0071A034 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		65B715D71A156B0E00319D19 /* GCTabView-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GCTabView-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B715DB1A156B0E00319D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65B715DC1A156B0E00319D19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65B715DE1A156B0E00319D19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65B715E01A156B0E00319D19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		65B715E31A156B0E00319D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65B715E91A156B0E00319D19 /* GCTabView-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GCTabView-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B715EE1A156B0E00319D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65B715EF1A156B0E00319D19 /* GCTabView_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCTabView_swiftTests.swift; sourceTree = "<group>"; };
+		65B715F91A15862300319D19 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		65FE1CE81A16F56B00DB791B /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +89,15 @@
 		65B715D91A156B0E00319D19 /* GCTabView-swift */ = {
 			isa = PBXGroup;
 			children = (
+				65FE1CE81A16F56B00DB791B /* StyleKit.swift */,
 				65B715DC1A156B0E00319D19 /* AppDelegate.swift */,
-				65B715DE1A156B0E00319D19 /* ViewController.swift */,
+				65B715F91A15862300319D19 /* TabBarView.swift */,
+				6583BE8B1A15A82E00C9C03B /* TabBarViewController.swift */,
+				65857AD21A16EFCD0071A034 /* TabViewController.swift */,
+				65857AD41A16F01D0071A034 /* NavigationViewController.swift */,
+				6583BE8D1A15AA3500C9C03B /* UpDownMouseGestureRecognizer.swift */,
+				6583BE871A158ECD00C9C03B /* TabBarItem.swift */,
+				6583BE891A15A43B00C9C03B /* TabBarItemState.swift */,
 				65B715E01A156B0E00319D19 /* Images.xcassets */,
 				65B715E21A156B0E00319D19 /* Main.storyboard */,
 				65B715DA1A156B0E00319D19 /* Supporting Files */,
@@ -208,7 +229,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65B715DF1A156B0E00319D19 /* ViewController.swift in Sources */,
+				65857AD31A16EFCD0071A034 /* TabViewController.swift in Sources */,
+				65B715FA1A15862300319D19 /* TabBarView.swift in Sources */,
+				65857AD51A16F01D0071A034 /* NavigationViewController.swift in Sources */,
+				6583BE8E1A15AA3500C9C03B /* UpDownMouseGestureRecognizer.swift in Sources */,
+				6583BE881A158ECD00C9C03B /* TabBarItem.swift in Sources */,
+				6583BE8A1A15A43B00C9C03B /* TabBarItemState.swift in Sources */,
+				6583BE8C1A15A82E00C9C03B /* TabBarViewController.swift in Sources */,
+				65FE1CE91A16F56B00DB791B /* StyleKit.swift in Sources */,
 				65B715DD1A156B0E00319D19 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +425,7 @@
 				65B715F51A156B0E00319D19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65B715F61A156B0E00319D19 /* Build configuration list for PBXNativeTarget "GCTabView-swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +434,7 @@
 				65B715F81A156B0E00319D19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

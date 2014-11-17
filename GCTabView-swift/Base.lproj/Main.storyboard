@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +641,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="GCTabView_swift" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -662,20 +662,190 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-23" y="254"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="XfG-lQ-9wD" customClass="NavigationViewController" customModule="GCTabView_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="m2S-Jp-Qdl" customClass="NSVisualEffectView">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="55z-yw-lqw">
+                                <rect key="frame" x="0.0" y="241" width="480" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="zn1-wA-uo2"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="6Hn-d3-zfJ" kind="embed" identifier="tab" id="1OX-tk-QlW"/>
+                                </connections>
+                            </containerView>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="s0R-Y0-g3k">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="241"/>
+                                <connections>
+                                    <segue destination="QwC-iJ-Frz" kind="embed" identifier="views" id="veB-kU-hZg"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="55z-yw-lqw" secondAttribute="trailing" id="53g-nh-f3Z"/>
+                            <constraint firstItem="55z-yw-lqw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="8d0-pv-sct"/>
+                            <constraint firstAttribute="trailing" secondItem="s0R-Y0-g3k" secondAttribute="trailing" id="ATX-Ao-E6C"/>
+                            <constraint firstItem="55z-yw-lqw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="SH4-BP-ung"/>
+                            <constraint firstAttribute="bottom" secondItem="s0R-Y0-g3k" secondAttribute="bottom" id="oZp-65-bJu"/>
+                            <constraint firstItem="s0R-Y0-g3k" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="rgN-Wn-QWq"/>
+                            <constraint firstItem="s0R-Y0-g3k" firstAttribute="top" secondItem="55z-yw-lqw" secondAttribute="bottom" id="wzz-iM-FoR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2" y="668"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="aby-em-3Re">
+            <objects>
+                <viewController id="6Hn-d3-zfJ" customClass="TabBarViewController" customModule="GCTabView_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="70S-Tr-uHr">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="mbE-qb-0Cd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="764" y="506"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="11x-Se-k55">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="3" id="QwC-iJ-Frz" customClass="TabViewController" customModule="GCTabView_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="vZr-Ah-gbv"/>
+                        <tabViewItem identifier="" id="SJB-i5-0QJ"/>
+                        <tabViewItem id="4dx-bQ-aQJ"/>
+                        <tabViewItem id="4Jc-qf-5Va"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="jWn-cB-Dia">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="ASV-Jm-g9W" kind="relationship" relationship="tabItems" id="jtI-Aw-C11"/>
+                        <segue destination="E7o-Zt-Cp8" kind="relationship" relationship="tabItems" id="aEr-Oq-fIO"/>
+                        <segue destination="srx-sp-gwY" kind="relationship" relationship="tabItems" id="ICI-zU-Vwz"/>
+                        <segue destination="fYb-xf-0Bn" kind="relationship" relationship="tabItems" id="9LU-TL-gWS"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="VoU-vy-z7M" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="577" y="1070"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X6t-Rw-bhc">
+            <objects>
+                <viewController id="srx-sp-gwY" sceneMemberID="viewController">
+                    <view key="view" id="Njn-PL-dmd" customClass="NSVisualEffectView">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hdU-jj-eeV">
+                                <rect key="frame" x="188" y="133" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Tab 3" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lrs-2i-JjE">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hdU-jj-eeV" secondAttribute="centerX" id="3TZ-r9-7RE"/>
+                            <constraint firstAttribute="centerY" secondItem="hdU-jj-eeV" secondAttribute="centerY" id="PWI-n8-4qf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="XKI-eZ-UYR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="1572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uk8-LD-5PP">
+            <objects>
+                <viewController id="fYb-xf-0Bn" sceneMemberID="viewController">
+                    <view key="view" id="teF-lg-ax8" customClass="NSVisualEffectView">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Be-No-vcW">
+                                <rect key="frame" x="188" y="133" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Tab 4" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u7W-kS-ZeG">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="4Be-No-vcW" secondAttribute="centerX" id="kYw-1i-0Vv"/>
+                            <constraint firstAttribute="centerY" secondItem="4Be-No-vcW" secondAttribute="centerY" id="kgH-SS-2nX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="DO6-eq-qP2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="1505"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QgV-07-j4E">
+            <objects>
+                <viewController id="ASV-Jm-g9W" sceneMemberID="viewController">
+                    <view key="view" id="Twm-qE-fEu" customClass="NSVisualEffectView">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uCI-wM-nN8">
+                                <rect key="frame" x="188" y="133" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Tab 1" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WO1-HI-g6R">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="uCI-wM-nN8" secondAttribute="centerX" id="FBa-Gy-pbP"/>
+                            <constraint firstAttribute="centerY" secondItem="uCI-wM-nN8" secondAttribute="centerY" id="qv0-el-5Pd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="w0S-Pe-2Pc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="794"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bIO-9V-Jc6">
+            <objects>
+                <viewController id="E7o-Zt-Cp8" sceneMemberID="viewController">
+                    <view key="view" id="0lL-6r-xbb" customClass="NSVisualEffectView">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TLG-pu-mq1">
+                                <rect key="frame" x="188" y="133" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Tab 2" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ity-cy-mvs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="TLG-pu-mq1" secondAttribute="centerY" id="MXY-nd-6Us"/>
+                            <constraint firstAttribute="centerX" secondItem="TLG-pu-mq1" secondAttribute="centerX" id="VUg-64-XdT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="TWb-K4-2b7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="1155"/>
         </scene>
     </scenes>
 </document>
